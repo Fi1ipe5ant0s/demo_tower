@@ -1,0 +1,15 @@
+---
+# tasks file for packages
+
+- name: Updating all packages on the host
+  yum:
+    name: '*'
+    state: latest
+    
+  
+- name: Installing a list of packages on the host if not present
+  package:
+    name: "{{ item.name }}"
+    state: present
+  with_items:
+    - "{{ packages_list }}"
