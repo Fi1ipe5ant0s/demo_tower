@@ -9,7 +9,7 @@
   
 - name: Installing a list of packages on the host if not present
   package:
-    name: "{{ item.name }}"
+    name: "{{ package_name }}"
     state: present
-  with_items:
-    - "{{ packages_list }}"
+  # with_items:
+  #   - "{{ packages_list }}"
