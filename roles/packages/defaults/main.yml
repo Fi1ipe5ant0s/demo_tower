@@ -1,5 +1,0 @@
----
-# defaults file for packages
-
-packages_list:
-  - name: vim

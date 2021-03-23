@@ -2,7 +2,7 @@
 # tasks file for packages
 
 - name: Updating all packages on the host
-  yum:
+  package:
     name: '*'
     state: latest
     
@@ -11,5 +11,3 @@
   package:
     name: "{{ package_name }}"
     state: present
-  # with_items:
-  #   - "{{ packages_list }}"
